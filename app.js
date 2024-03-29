@@ -1,13 +1,17 @@
 let hours = document.querySelector("#hours");
 let minutes = document.querySelector("#minutes");
 let seconds = document.querySelector("#seconds");
-let ampm = document.querySelector("#ampm");
+let amPm = document.querySelector("#amPm");
 
 function updateClock() {
   let h = new Date().getHours();
   let m = new Date().getMinutes();
   let s = new Date().getSeconds();
-
+  if (h > 12) {
+    amPm.innerText = "PM";
+  } else {
+    amPm.innerText = "AM";
+  }
   // Logic for setting time in 12 hours format
   h = h > 12 ? h - 12 : h;
 
