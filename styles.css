@@ -20,7 +20,6 @@ h2 {
 }
 .clock div {
   margin: 5px;
-  position: relative;
 }
 .clock span {
   height: 120px;
@@ -47,10 +46,32 @@ h2 {
   letter-spacing: 4px;
   background-color: blue;
 }
-.clock #ampm {
+.clock #amPm {
   bottom: 0;
-  position: absolute;
   height: 30px;
   font-size: 24px;
   background-color: green;
+}
+
+@media screen and (max-width: 680px) {
+  .clock span {
+    height: 75px;
+    width: 75px;
+    font-size: 65px;
+  }
+  #separator {
+    font-size: 65px;
+  }
+  .clock div {
+    margin: 2px;
+  }
+  .clock .text {
+    height: 20px;
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+  .clock #amPm {
+    height: 20px;
+    font-size: 16px;
+  }
 }
